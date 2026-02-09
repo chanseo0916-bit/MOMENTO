@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMENTO - 영업시간 안내</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hours-page {
+            padding: 150px 0;
+            background-color: #f9f9f9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hours-card {
+            background: #fff;
+            padding: 60px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+            position: relative;
+        }
+
+        /* Decorative border box similar to image provided */
+        .hours-card::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid #ddd;
+            pointer-events: none;
+        }
+
+        .hours-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hours-time {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .hours-info {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .contact-highlight {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .insta-link {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .insta-link:hover {
+            color: var(--primary-color);
+        }
+
+        .ring-icon {
+            color: #b4a0d8;
+            /* Light purple like in image */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">MOMENTO</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">브랜드 스토리</a></li>
+                <li><a href="interior.html">매장 내부</a></li>
+                <li><a href="index.html#collection">컬렉션</a></li>
+                <li><a href="location.html">오시는 길</a></li>
+                <li><a href="hours.html" class="active">영업시간</a></li>
+                <li><a href="#contact">예약하기</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hours-page">
+        <div class="hours-card" data-aos="fade-up">
+            <h2 class="hours-title">영업시간</h2>
+            <div class="hours-time">10:00 - 19:00</div>
+
+            <div class="hours-info">
+                예약은 전화/네이버 예약/인스타그램 DM 으로<br>
+                가능하니 편하신 방법으로 문의주세요 <i class="fas fa-ring ring-icon"></i>
+            </div>
+
+            <div class="contact-highlight">
+                <i class="fas fa-phone-alt" style="color: #d15b7e; margin-right: 5px;"></i> 010-4588-1389
+            </div>
+
+            <a href="https://instagram.com/momento_diamond" target="_blank" class="insta-link">
+                @momento_diamond
+            </a>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

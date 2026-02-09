@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMENTO | 오시는 길</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nanum+Myeongjo:wght@400;700;800&family=Pretendard:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">MOMENTO</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="about.html">브랜드 스토리</a></li>
+                <li><a href="interior.html">매장 내부</a></li>
+                <li><a href="index.html#collections">컬렉션</a></li>
+                <li><a href="location.html" class="active">오시는 길</a></li>
+                <li><a href="index.html#contact">예약하기</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sub-Header -->
+    <header class="sub-header" style="background-image: url('모멘터 외부.jpeg');">
+        <div class="sub-header-content" data-aos="fade-up">
+            <h1>Location</h1>
+            <div class="breadcrumb">Home > Location</div>
+        </div>
+    </header>
+
+    <!-- Location Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <span class="section-subtitle">Visit Us</span>
+                <h2>모멘토 오시는 길</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-image" data-aos="fade-right">
+                    <img src="외부 로고.jpg" alt="Momento Exterior Sign" class="store-exterior-img">
+                    <div style="margin-top:20px; text-align:center;">
+                        <p style="color:#666;">
+                            종로3가역 8번 출구와 9번 출구 사이<br>
+                            청룡상가 옆 건물 2층입니다.<br>
+                            (1층에 '씨엘' 매장이 보입니다)
+                        </p>
+                    </div>
+                </div>
+                <div class="col-text" data-aos="fade-left">
+                    <div class="contact-details" style="margin-top: 0;">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p style="font-size: 1.1rem; font-weight: 500;">서울 종로구 돈화문로 38-1 2층</p>
+                                <p style="color:#888; font-size: 0.9rem; margin-top:5px;">(지번: 묘동 148-1)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-subway"></i>
+                            <div>
+                                <h4>Subway</h4>
+                                <p><strong>1, 3, 5호선 종로3가역</strong><br>8번 출구에서 도보 102m (약 2분)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Contact</h4>
+                                <p>0507-1436-8552</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Open Hours</h4>
+                                <p>매일 ~ 19:00 까지 영업<br><span style="color:#888; font-size: 0.9rem;">(방문 전 예약 권장)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 30px;">
+                            <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%A2%85%EB%A1%9C%EA%B5%AC%20%EB%8F%88%ED%99%94%EB%AC%B8%EB%A1%9C%2038-1"
+                                target="_blank" class="btn btn-dark" style="width:100%; text-align:center;">
+                                <i class="fas fa-map"></i> 네이버 지도로 보기
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Container (Image for now since we don't have API key, or Iframe if available) -->
+            <!-- Using a static map placeholder or just rely on the link above. Let's try to embed a simple iframe if possible, but since I can't guarantee it works without key, I will stick to the link button above and maybe just a placeholder area if needed. Actually, I removed the map container div in favor of the specialized layout above. -->
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">MOMENTO</div>
+                <div class="social-links">
+                    <a href="https://instagram.com/momento_diamond" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://blog.naver.com/momento_diamond" target="_blank"><i class="fas fa-blog"></i></a>
+                </div>
+                <div class="copyright">
+                    &copy; 2024 MOMENTO. All Rights Reserved. Used for demonstration.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
