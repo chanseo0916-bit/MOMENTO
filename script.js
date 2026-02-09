@@ -70,6 +70,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Scroll to Top Button Logic
+const scrollTopBtn = document.getElementById('scroll-top');
+if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollTopBtn.classList.add('active');
+        } else {
+            scrollTopBtn.classList.remove('active');
+        }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 /* Reviews Generation Logic */
 const reviewData = [
     {
@@ -220,8 +239,31 @@ if (reviewsContainer) {
 // ==========================================
 const reservationForm = document.getElementById('reservation-form');
 const reservationModal = document.getElementById('reservation-modal');
+const formModal = document.getElementById('form-modal');
 
-// Close modal when clicking outside
+// Functions to open/close Form Modal
+function openReservationModal() {
+    if (formModal) {
+        formModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+}
+
+function closeReservationModal() {
+    if (formModal) {
+        formModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close form modal when clicking outside
+if (formModal) {
+    formModal.addEventListener('click', (e) => {
+        if (e.target === formModal) closeReservationModal();
+    });
+}
+
+// Close success modal when clicking outside
 if (reservationModal) {
     reservationModal.addEventListener('click', (e) => {
         if (e.target === reservationModal) {
@@ -231,6 +273,9 @@ if (reservationModal) {
 }
 
 function showModal() {
+    // Close the form modal first if it's open
+    closeReservationModal();
+
     if (reservationModal) {
         reservationModal.classList.add('active');
         setTimeout(() => {
@@ -240,6 +285,10 @@ function showModal() {
         alert('예약이 완료되었습니다.');
     }
 }
+
+// Expose functions to global scope for HTML onclick
+window.openReservationModal = openReservationModal;
+window.closeReservationModal = closeReservationModal;
 
 if (reservationForm) {
     reservationForm.addEventListener('submit', function (e) {
